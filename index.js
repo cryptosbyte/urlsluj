@@ -76,10 +76,10 @@ app.get("/api/validate", async (req, res) => {
   return res.json({ valid: exists ? false : true });
 });
 
-app.get("*", (req, res) => {
-    if (!req.url.endsWith('/icon.png')) {
-    res.redirect("/")}
-    }
-);
+// app.get("*", (req, res) => {
+//     if (!req.url.endsWith('/icon.png')) {
+//     res.redirect("/")}
+//     }
+// );
 
 export default app
