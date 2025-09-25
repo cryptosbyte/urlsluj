@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+  "postinstall": "prebuild-install || npm run build-release"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@dataconnect/generated": "file:src/dataconnect-generated",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "quick.db": "^7.1.3"
