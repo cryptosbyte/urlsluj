@@ -25,8 +25,8 @@ const ensureHttps = (url) => {
   return url;
 };
 
-app.use(express.static("public"));
-app.use(express.static("pages"));
+app.use(express.static((path.join(__dirname, "public"))));
+// app.use(express.static("pages"));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "index.html"));
