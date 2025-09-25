@@ -77,7 +77,7 @@ app.get("/api/validate", async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-    if (!req.url.endsWith('/icon/icon.png')) {
+    if (!req.url.endsWith('/icon.png')) {
     res.redirect("/")}
     }
 );
