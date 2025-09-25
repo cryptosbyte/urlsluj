@@ -26,13 +26,14 @@ const ensureHttps = (url) => {
 };
 
 app.use(express.static("public"));
+app.use(express.static("pages"));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "pages", "index.html"));
 });
 
 app.get("/landing", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "landing.html"));
+  res.sendFile(path.join(__dirname, "pages", "landing.html"));
 });
 
 app.post("/api/new", async (req, res) => {
